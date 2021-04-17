@@ -1,0 +1,14 @@
+1.what was the maximum temperature in new york in the month of January
+
+import pandas as pd
+df = pd.read_csv('D:/Python/Python_files/Exercise1.CSV')
+df['Temperature'].max()
+
+2.On which days it rained?
+df['EST'][df['Events'] == 'Rain']
+
+3.What was the average speed of wind during the month?
+df.fillna(0,inplace=True)
+df['WindSpeedMPH'].mean()
+
+
