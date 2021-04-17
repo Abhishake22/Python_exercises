@@ -1,0 +1,29 @@
+import pandas as pd
+df = pd.read_csv('D:/Python/Python_files/Exercise2.CSV')
+
+To retrive last 2 rows
+df.tail(2) 
+
+df[2:5] # to print rows 2,3,4
+
+df[['temperature','windspeed','event']] # to represent necessary columns
+
+df['temperature'].mean() #average
+
+df.describe() #it will print the statistics - 25 percentile,50 percentile
+
+df[df.temperature>=32] #print rows which has temperature which is >=32
+
+df[df.temperature==df.temperature.max()]
+
+df[['day','temperature']][df.temperature==df.temperature.max()] #only print the day when temperature was maximum
+
+
+df.set_index('day',inplace=True) #setting Index as Day
+
+df.loc['01-06-2017']
+
+df.set_index('event',inplace=True)
+
+df.loc['Snow']
+
