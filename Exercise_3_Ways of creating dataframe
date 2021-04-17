@@ -1,0 +1,39 @@
+Creating Dataframe using Excel:
+
+df = pd.read_excel('D:/Python/Python_files/Weather_2.xlsx')
+
+
+
+Creating Dataframe using xlsx:
+
+
+weatherdate = {
+    'day': ['1/1/2017','1/2/2017','1/3/2017'],
+    'temperature': [32,35,28],
+    'windspeed': [6,7,2]
+
+}
+
+df = pd.DataFrame(weatherdate) # Passing Dictionary as an Argument
+df
+
+output:
+
+
+day	temperature	windspeed
+0	1/1/2017	32	6
+1	1/2/2017	35	7
+2	1/3/2017	28	2
+
+
+Creating Dataframe using Tuples:
+
+weather_date = [
+    ('1/1/2017',32,6,'Rain'),
+    ('1/2/2017',26,5,'Sunny'),
+    
+]
+
+df = pd.DataFrame(weather_date,columns=["day","temperature","windspeed","event"])
+df
+    
